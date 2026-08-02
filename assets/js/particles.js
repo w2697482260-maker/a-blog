@@ -50,7 +50,7 @@
       particles.forEach(function (p) {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(139, 92, 246, 0.6)";
+        ctx.fillStyle = "rgba(59, 130, 246, 0.6)";
         ctx.fill();
       });
 
@@ -65,7 +65,7 @@
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
-            ctx.strokeStyle = "rgba(109, 141, 255, " + opacity + ")";
+            ctx.strokeStyle = "rgba(59, 130, 246, " + opacity + ")";
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -81,7 +81,7 @@
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = "rgba(168, 85, 247, " + opacity + ")";
+            ctx.strokeStyle = "rgba(139, 92, 246, " + opacity + ")";
             ctx.lineWidth = 1;
             ctx.stroke();
           }
