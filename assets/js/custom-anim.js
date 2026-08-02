@@ -97,9 +97,34 @@
     });
   }
 
+  /* ============ 文章卡片滚动淡入 ============ */
+  function initCardFadeIn() {
+    var cards = document.querySelectorAll("#post-list .card");
+    if (!cards.length) return;
+    cards.forEach(function (card, i) {
+      card.classList.add("fade-in");
+      card.style.transitionDelay = (i * 0.08) + "s";
+    });
+    // 复用 fade-in 观察逻辑
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      cards.forEach(function (c) { observer.observe(c); });
+    } else {
+      cards.forEach(function (c) { c.classList.add("visible"); });
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initTypewriter();
     initFadeIn();
+    initCardFadeIn();
     initBackToTop();
     initAvatarHover();
   });
