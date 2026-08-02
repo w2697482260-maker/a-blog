@@ -122,7 +122,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    initTypewriter();
+    // initTypewriter(); // 首页 Hero 区已含 subtitle，打字机停用避免重复
     initFadeIn();
     initCardFadeIn();
     initBackToTop();

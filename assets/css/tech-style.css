@@ -126,6 +126,143 @@ pre {
   50% { opacity: 0; }
 }
 
+/* ===== 首页 Hero 区 ===== */
+.home-hero {
+  padding: 20px 8px 10px;
+  margin-bottom: 15px;
+}
+
+.hero-head {
+  text-align: center;
+  padding: 15px 0 10px;
+}
+
+.hero-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-highlight {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--heading-color, #b0b0b0);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.hero-tagline {
+  font-size: 0.95rem;
+  color: var(--text-color, #999);
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+/* 技能徽章 */
+.hero-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #d1d5db;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.15));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: default;
+}
+
+.skill-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* 精选项目区 */
+.hero-projects {
+  margin-bottom: 10px;
+}
+
+.hero-section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--heading-color, #d0d0d0);
+  background: none;
+  -webkit-text-fill-color: var(--heading-color, #d0d0d0);
+}
+
+.hero-posts-title {
+  margin-top: 25px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 10px;
+  padding: 15px 18px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.12);
+}
+
+.project-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--heading-color, #e0e0e0);
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-color, #aaa);
+  margin-bottom: 8px;
+}
+
+.project-links a {
+  color: #8b5cf6;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #3b82f6;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .hero-name { font-size: 1.6rem; }
+  .hero-subtitle { font-size: 0.95rem; }
+  .hero-tagline { font-size: 0.85rem; }
+}
+
 /* ===== 主内容区浮在粒子之上 ===== */
 #main-wrapper {
   position: relative;
