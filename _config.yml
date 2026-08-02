@@ -1,0 +1,59 @@
+# 测试工程师个人博客配置
+# 使用 GitHub Pages 自动构建
+
+# 站点基本信息
+title: QA 测试博客
+description: >-
+  软件测试工程师的个人技术博客，记录自动化测试、性能测试、
+  缺陷分析与质量保障的实战经验。
+author: 测试工程师
+
+# GitHub Pages 地址（通过 Actions 构建发布）
+# 普通仓库发布后的地址格式：https://<用户名>.github.io/<仓库名>/
+url: "https://w2697482260-maker.github.io"
+baseurl: "/a-blog"
+
+# 主题：用 Jekyll 官方默认主题，可换成 other themes
+theme: minima
+
+# 文章分类（对应你的测试方向）
+collections:
+  testing:
+    output: true
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+# 分页
+paginate: 10
+paginate_path: "/page:num/"
+
+# 作者信息（求职展示关键）
+author:
+  name: 测试工程师
+  email: your_email@example.com
+  github: w2697482260-maker
+  # 可加：linkedin / 博客其他链接
+
+# 社交链接（面试官会看）
+github_username: w2697482260-maker
+
+# Markdown 设置
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 时区
+timezone: Asia/Shanghai
+
+# 默认 front matter
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      author: 你的名字
